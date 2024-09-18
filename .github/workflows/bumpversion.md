@@ -16,7 +16,7 @@ Go to your GitHub account > Settings > Developer Settings > Personal access toke
 
 **2. Add the token to the repo**  
 Go to Settings > Secrets > Actions > New repository secret  
--> Token name: PERSONAL_ACCESS_TOKEN  
+-> Token name: CLAP_RELEASE_PLEASE_TOKEN  
 -> Paste the token
 
 ## Usage
@@ -33,5 +33,3 @@ Release Please does so by parsing your git history, looking for [Conventional Co
 | major   | `feat!:`, `fix!:`, `refactor!:`, etc. | SemVer major : represents a breaking change |
 | minor   | `feat:`                               | SemVer minor : Represents a new feature     |
 | patch   | `fix:`,                               | SemVer patch : Represents bug fixes         |
-
-🤖 And voilà, it's automated!
