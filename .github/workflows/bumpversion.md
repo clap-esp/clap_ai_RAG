@@ -25,11 +25,3 @@ Go to Settings > Secrets > Actions > New repository secret
 Release Please does so by parsing your git history, looking for [Conventional Commit messages](https://www.conventionalcommits.org/en/v1.0.0/), and creating release PRs."
 
 > [Documentation](https://github.com/googleapis/release-please)
-
-**How to auto-increment versions with commits?**
-
-| version | commit type                           | description                                 |
-| ------- | ------------------------------------- | ------------------------------------------- |
-| major   | `feat!:`, `fix!:`, `refactor!:`, etc. | SemVer major : represents a breaking change |
-| minor   | `feat:`                               | SemVer minor : Represents a new feature     |
-| patch   | `fix:`,                               | SemVer patch : Represents bug fixes         |
