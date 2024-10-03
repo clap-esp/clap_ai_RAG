@@ -1,0 +1,24 @@
+name: Push File
+
+on:
+  push:
+    branches:
+      - main
+jobs:
+  copy-file:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout
+      uses: actions/checkout@v2
+
+    - name: Pushes test file
+      uses: dmnemec/copy_file_to_another_repo_action@main
+      env:
+        API_TOKEN_GITHUB: ${{ secrets.TOKEN_GITHUB_PUSH_FILE }}
+      with:
+        source_file: 'changelog.md'
+        destination_repo: git@github.com:EpitechMscProPromo2025/T-ESP-901-60287-MPL-Clap-2
+        destination_folder: 'API2'
+        # user_email: 'example@email.com'
+        user_name: 'MetalBrackets'
+        commit_message: 'Update changelog.md'
